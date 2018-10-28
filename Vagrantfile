@@ -12,9 +12,9 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "hashicorp/precise64"
-  config.vm.provider "hyperv"
-  config.vm.provision "shell", path: "bootstrap.ps1"
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.provider "virtualbox"
+  config.vm.provision "shell", path: "bootstrap.sh"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
